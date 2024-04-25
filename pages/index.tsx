@@ -7,11 +7,7 @@ const UploadPage: NextPage<PageProps> = ({}) => {
 
     return (
         <>
-            <main
-                className={`min-h-screen p-14 w-full bg-[#f7f7f9]`}
-            >
-                <FileUpload />
-            </main>
+            <FileUpload />
         </>
     )
 }
