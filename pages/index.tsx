@@ -7,6 +7,7 @@ import { useDropzone } from "react-dropzone";
 import { useRef, useState } from "react";
 import { CloseOutlined, MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 
 let index = 0;
@@ -16,6 +17,7 @@ interface PageProps {}
 const UploadPage: NextPage<PageProps> = ({}) => {
 
     const [form] = Form.useForm();
+    const router = useRouter();
 
     const { getRootProps, getInputProps, isDragActive } = useDropzone({
         accept: {
@@ -38,6 +40,13 @@ const UploadPage: NextPage<PageProps> = ({}) => {
     const onNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setName(event.target.value);
     };
+
+    const handleSubmit = (values: any) => {
+        console.log("Submitted:", values);
+
+        router.push("/success")
+
+    }
 
     const addItem = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
         e.preventDefault();
@@ -71,6 +80,8 @@ const UploadPage: NextPage<PageProps> = ({}) => {
                     layout="vertical"
                     form={form}
                     onValuesChange={onFormChange}
+                    action={"/success"}
+                    onFinish={handleSubmit}
                 >
 
                     <Divider orientation="left">Contact Information</Divider>
@@ -133,6 +144,7 @@ const UploadPage: NextPage<PageProps> = ({}) => {
                         <Select
                             style={{ width: "100%" }}
                             placeholder="Select skills or technology"
+                            mode="multiple"
                             dropdownRender={(menu) => (
                                 <>
                                 {menu}
