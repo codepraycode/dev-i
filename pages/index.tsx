@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useDropzone } from "react-dropzone";
 import { useRef, useState } from "react";
 import { CloseOutlined, MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
+import Head from "next/head";
 
 
 let index = 0;
@@ -52,14 +53,18 @@ const UploadPage: NextPage<PageProps> = ({}) => {
 
     return (
         <>
+            <Head>
+                <title>Dev[i] / Index a developer</title>
+            </Head>
+
             <Header />
-            <br/><br/><br/>
+            <br/><br/>
 
 
             <section className="container" >
 
                 <h1>Welcome! To get index, please provide your information</h1>
-                <br/><br/>
+                <br/>
 
 
                 <Form

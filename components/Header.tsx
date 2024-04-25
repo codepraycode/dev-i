@@ -6,7 +6,7 @@ export default function Header() {
         <header>
 
             <div className="logo text-center font-bold">
-                <Link href="/">Job Hub</Link>
+                <Link href="/">Dev[i]</Link>
             </div>
             
         </header>
