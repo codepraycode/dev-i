@@ -1,7 +1,5 @@
 import { NextPage } from "next";
-import FileUpload from "./components/FileUpload";
-
-
+import FileUpload from "@/components/FileUpload";
 
 interface PageProps {}
 
