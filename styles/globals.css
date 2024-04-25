@@ -16,6 +16,90 @@
   }
 }
 
+
 body {
-  color: rgb(var(--foreground-rgb));
+	font-size: 16px;
+}
+
+
+.container {
+	width: 800px;
+	max-width: 90%;
+	margin-inline: auto;
+}
+
+.logo {
+	color: #1c1c1c;
+	padding-block: 2rem;
+
+	a {
+		text-decoration: none;
+		font-size: 3rem;
+	}
+}
+
+
+.btn-submit {
+	background-color: #1c1c1c;
+	width: 20rem;
+	max-width: 90%;
+
+	padding-block: 1.5rem;
+
+	margin-block: 1rem;
+
+	margin-inline: auto;
+
+
+	font-weight: bold;
+	font-size: 1.3rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.btn-link {
+	outline: 1px solid #1c1c1c;
+	border-radius: .2rem;
+	padding: 1rem;
+
+	transition: background-color 200ms ease, color 200ms ease;
+}
+
+.btn-link:hover {
+	background-color: #1c1c1c;
+	color: whitesmoke;
+}
+
+.text-h1 {
+	font-size: 3rem;
+}
+
+
+.ant-input {
+/* .ant-select-selection-search { */
+	padding-block: .8rem;
+	padding-inline: 1rem;
+}
+
+.ant-select{
+	/* height: 40rem !important; */
+
+	/* padding-block: 40rem; */
+	height: 3rem;
+
+	/* display: none !important; */
+}
+
+.dynamic-delete-button {
+	margin-left: 1rem;
+	
+}
+
+.dynamic-delete-button svg {
+	top: .45rem;
+	position: relative;
+	width: 1.5rem;
+	height: 1.5rem;
 }

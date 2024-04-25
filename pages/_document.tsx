@@ -6,7 +6,7 @@ export default function Document() {
         <Html lang="en">
             <Head />
             <body>
-                <main className={`min-h-screen p-14 w-full bg-[#f7f7f9]`}>
+                <main className={`min-h-screen w-full bg-[#f7f7f9]`}>
                     <Main />
                 </main>
                 <NextScript />
