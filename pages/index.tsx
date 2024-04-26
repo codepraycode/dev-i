@@ -5,7 +5,6 @@ import { useState } from "react";
 import { CloudUploadOutlined, DribbbleOutlined,
     GithubOutlined, GlobalOutlined,
     LinkedinOutlined } from "@ant-design/icons";
-import Head from "next/head";
 import { useRouter } from "next/router";
 import siteData from "@/data/site.json";
 import {message, Upload} from "antd";
@@ -78,9 +77,6 @@ const UploadPage: NextPage<PageProps> = ({}) => {
 
     return (
         <>
-            <Head>
-                <title>{siteData.siteTitle} / {siteData.siteDescription}</title>
-            </Head>
 
             <Header />
             <section className="container text-center">
