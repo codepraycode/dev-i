@@ -1,0 +1,34 @@
+{
+    "RegisterDeveloper": [
+        {
+            "label": "First name",
+            "required": true,
+            "type": "text"
+        },
+        {
+            "label": "Last name",
+            "required": true,
+            "type": "text"
+        },
+        {
+            "label": "Phone Number",
+            "required": true,
+            "type": "tel"
+        },
+        {
+            "label": "WhatsApp Number",
+            "required": false,
+            "type": "tel"
+        },
+        {
+            "label": "state",
+            "required": true,
+            "type": "select"
+        },
+        {
+            "label": "cv",
+            "required": true,
+            "type": "file"
+        }
+    ]
+}

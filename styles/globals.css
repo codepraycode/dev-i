@@ -8,15 +8,6 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-
 body {
 	font-size: 16px;
 }
@@ -32,19 +23,30 @@ body {
 	color: #1c1c1c;
 	padding-block: 2rem;
 
-	a {
-		text-decoration: none;
-		font-size: 3rem;
-	}
+}
+
+.logo a {
+	text-decoration: none;
+	font-size: 3rem;
+}
+
+.logo .locale {
+	/* background-color: red; */
+	font-size: 1rem;
+}
+
+
+.intro {
+	font-size: 2rem;
 }
 
 
 .btn-submit {
 	background-color: #1c1c1c;
-	width: 20rem;
-	max-width: 90%;
+	width: 100%;
+	/* max-width: 90%; */
 
-	padding-block: 1.5rem;
+	padding-block: 1.9rem;
 
 	margin-block: 1rem;
 
@@ -57,6 +59,11 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.btn-submit:hover,
+.btn-submit:disabled {
+	background-color: #0f0f0fb6 !important;
 }
 
 .btn-link {
@@ -77,19 +84,66 @@ body {
 }
 
 
+
+/* Forms */
+
+.input-group {
+	display: flex;
+	justify-content: space-between;
+
+	margin-block: 1rem;
+}
+
+/* Small screens */
+@media screen and (max-width: 780px) {
+	.input-group {
+		flex-direction: column;
+	}
+}
+
+
+/* medium screens */
+@media (min-width: 781px) and (max-width: 860px){
+	.input-group {
+		gap: 2rem;
+	}
+}
+
+/* Large screens */
+@media screen and (min-width: 1000px) {}
+
+.input-group .ant-col {
+	width: 24rem !important;
+	max-width: 100% !important;
+}
+
+
+.upload label {
+	/* background-color: red; */
+	font-size: 1rem;
+}
+
+/* Ant design */
+
+.ant-input-prefix{
+	display: inline-block;
+	margin-right: 1rem !important;
+}
+.ant-input-prefix svg{
+
+	width: 1.5rem;
+	height: 1.5rem;
+
+	/* height: 60%; */
+}
+
 .ant-input {
-/* .ant-select-selection-search { */
-	padding-block: .8rem;
+	padding-block: .8rem !important;
 	padding-inline: 1rem;
 }
 
 .ant-select{
-	/* height: 40rem !important; */
-
-	/* padding-block: 40rem; */
 	height: 3rem;
-
-	/* display: none !important; */
 }
 
 .dynamic-delete-button {
