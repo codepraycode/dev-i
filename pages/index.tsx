@@ -1,16 +1,15 @@
 import { NextPage } from "next";
 import Header from "@/components/Header";
-import { Button,  Divider, Form, Input, InputRef, Select, Space, UploadProps } from "antd";
-import Image from "next/image";
-import { useDropzone } from "react-dropzone";
-import { useRef, useState } from "react";
-import { CloudUploadOutlined, DribbbleOutlined, GithubOutlined, GlobalOutlined, InboxOutlined, LinkedinOutlined, MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
+import { Button,  Divider, Form, Input, Select, Space, UploadProps } from "antd";
+import { useState } from "react";
+import { CloudUploadOutlined, DribbbleOutlined,
+    GithubOutlined, GlobalOutlined,
+    LinkedinOutlined } from "@ant-design/icons";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import siteData from "@/data/site.json";
 import {message, Upload} from "antd";
 
-let index = 0;
 interface PageProps {}
 
 const {Dragger} = Upload;
@@ -30,10 +29,9 @@ const UploadPage: NextPage<PageProps> = ({}) => {
     const [form] = Form.useForm();
     const router = useRouter();
 
-    const [skills, setSkills] = useState<string[]>([]);
+    const [skills] = useState<string[]>([]);
 
     const [country, setCountry] = useState(cityData[provinceData[0] as CityName]);
-    // const [city, setCity] = useState(cityData[provinceData[0]][0] as CityName);
     const [city, setCity] = useState<CityName | null>(null);
 
     const handleProvinceChange = (value: CityName) => {
@@ -76,9 +74,6 @@ const UploadPage: NextPage<PageProps> = ({}) => {
             console.log('Dropped files', e.dataTransfer.files);
         },
     };
-
-    
-
 
 
     return (
